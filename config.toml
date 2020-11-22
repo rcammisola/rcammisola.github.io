@@ -1,3 +1,9 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://rcammisola.github.io/"
+languageCode = "en-gb"
+title = "Rocco Cammisola"
+theme = "hyde"
+
+[params]
+    layoutReverse = true
+    themeColor = "theme-base-0d"
+    description = "I don't know what I'm doing, hopefully I'll work it out..."
