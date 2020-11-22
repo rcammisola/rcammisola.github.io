@@ -2,6 +2,7 @@
 	path = public
 	url = git@github.com:rcammisola/rcammisola.github.io.git
 	branch = master
-[submodule "themes/hyde"]
-	path = themes/hyde
-	url = https://github.com/spf13/hyde.git
+    ignore = all
+[submodule "themes/hugo-theme-simple-blog"]
+	path = themes/hugo-theme-simple-blog
+	url = git@github.com:10mohi6/hugo-theme-simple-blog.git

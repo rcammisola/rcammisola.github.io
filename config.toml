@@ -1,9 +1,16 @@
 baseURL = "https://rcammisola.github.io/"
 languageCode = "en-gb"
 title = "Rocco Cammisola"
-theme = "hyde"
+theme = "hugo-theme-simple-blog"
 
 [params]
     layoutReverse = true
     themeColor = "theme-base-0d"
     description = "I don't know what I'm doing, hopefully I'll work it out..."
+    githubName = "rcammisola"
+    twitterName = "rcammisola"
+    hideHUGOSupport = false
+
+[taxonomies]
+category = "categories"
+tag = "tags"
