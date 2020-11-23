@@ -3,6 +3,6 @@
 	url = git@github.com:rcammisola/rcammisola.github.io.git
 	branch = master
     ignore = all
-[submodule "themes/hugo-theme-simple-blog"]
-	path = themes/hugo-theme-simple-blog
-	url = git@github.com:10mohi6/hugo-theme-simple-blog.git
+[submodule "themes/ghostwriter"]
+	path = themes/ghostwriter
+	url = git@github.com:jbub/ghostwriter.git
