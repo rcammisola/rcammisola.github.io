@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Home</title>
+    <link>https://rcammisola.github.io/post/</link>
+    <description>Recent content in Posts on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Rocco Cammisola</copyright>
+    <lastBuildDate>Thu, 15 Jan 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://rcammisola.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pirates arrrr</title>
+      <link>https://rcammisola.github.io/2015/01/15/2015-01-15-pirates/</link>
+      <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://rcammisola.github.io/2015/01/15/2015-01-15-pirates/</guid>
+      <description>&lt;p&gt;Piracy is typically an act of robbery or criminal violence at sea. The term can include acts committed on land, in the air, or in other major bodies of water or on a shore.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://rcammisola.github.io/2014/09/28/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://rcammisola.github.io/2014/09/28/creating-a-new-theme/</guid>
+      <description>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content.
+I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://rcammisola.github.io/2014/04/02/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://rcammisola.github.io/2014/04/02/goisforlovers/</guid>
+      <description>&lt;p&gt;Hugo uses the excellent &lt;a href=&#34;https://golang.org/&#34;&gt;go&lt;/a&gt; &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; library for
+its template engine. It is an extremely lightweight engine that provides a very
+small amount of logic.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Migrating from Jekyll</title>
+      <link>https://rcammisola.github.io/2014/04/02/migrate-from-jekyll/</link>
+      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://rcammisola.github.io/2014/04/02/migrate-from-jekyll/</guid>
+      <description>&lt;p&gt;A guide to migrate from Jekyll blogs&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://rcammisola.github.io/2014/04/02/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://rcammisola.github.io/2014/04/02/hugoisforlovers/</guid>
+      <description>&lt;p&gt;These steps should get you started with Hugo blogging&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

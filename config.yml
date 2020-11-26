@@ -1,22 +1,20 @@
 baseurl: "https://rcammisola.github.io/"
-title: Rocco Cammisola
-theme: ghostwriter
-languageCode: en-gb
+title: Home
+publishDir: "docs"
+
+theme: beautifulhugo
+languageCode: en
+defaultContentLanguage: en
 copyright: Rocco Cammisola
-pygmentsUseClasses: true
-pygmentsCodeFences: true
 
 markup:
   highlight:
     codeFences: true
     guessSyntax: false
-    hl_Lines: ""
     lineNoStart: 1
     lineNos: true
-    lineNumbersInTable: true
-    noClasses: true
-    style: dracula
-    tabWidth: 2
+    lineNumbersInTable: false
+    style: "dracula"
 
 privacy:
   disqus:
@@ -27,8 +25,10 @@ privacy:
     useSessionStorage: false
 
 author:
-  name: My Name
+  name: Rocco Cammisola
   profile: ""
+  github: "rcammisola"
+  twitter: "rcammisola"
 
 taxonomies:
   tag: tags
@@ -36,21 +36,11 @@ taxonomies:
 params:
   mainSections:
     - post
-  intro: true
-  headline: Ghostwriter example
-  description: I don't know what I'm doing, hopefully I'll work it out...
-  github: "https://github.com/rcammisola"
-  twitter: "https://twitter.com/rcammisola"
-  opengraph: true
-  shareTwitter: true
-  rss: true
-  shareFacebook: false
-  shareLinkedIn: false
+  homeTitle: Rocco Cammisola
+  subtitle: I don't know what I'm doing, hopefully I'll work it out...
+  logo: "img/profile.jpeg"
+  rss: false
   dateFormat: "Mon, Jan 2, 2006"
-  exponeaJsUrl: ""
-  exponeaTarget: ""
-  exponeaToken: ""
-  exponeaTrackVisits: false
   readingTime: true
   readingTimeText: "Estimated reading time:"
   fathomUrl: ""
@@ -59,17 +49,11 @@ params:
 permalinks:
   post: "/:year/:month/:day/:filename/"
 
-# menu:
-#   main:
-#     - name: Blog
-#       url: /
-#       weight: 1
-#     - name: Projects
-#       url: /project/
-#       weight: 2
-#     - name: Contact
-#       url: /page/contact/
-#       weight: 3
-#     - name: About
-#       url: /page/about/
-#       weight: 4
+menu:
+  main:
+    - name: Posts
+      url: /
+      weight: 1
+    - name: About
+      url: /page/about/
+      weight: 2
