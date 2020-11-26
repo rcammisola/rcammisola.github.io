@@ -15,11 +15,15 @@ categories = [
 
 +++
 
+
+These steps should get you started with Hugo blogging
+
+<!--more-->
+
 ## Step 1. Install Hugo
 
 Goto [hugo releases](https://github.com/spf13/hugo/releases) and download the
 appropriate version for your os and architecture.
-
 Save it somewhere specific as we will be using it in the next step.
 
 More complete instructions are available at [installing hugo](/overview/installing/)
@@ -70,6 +74,12 @@ def test_func():
     return map(x, do_x)
 {{< /highlight >}}
 
+
+Quotes:
+
+> Something someone said
+>
+>?a Source: Something
 
 Once you've gotten here, follow along the rest of this page on your local build.
 

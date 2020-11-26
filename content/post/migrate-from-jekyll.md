@@ -5,9 +5,13 @@ date = 2014-04-02T02:13:50Z
 author = "Michael Henderson"
 +++
 
+A guide to migrate from Jekyll blogs
+<!--more-->
+
 ## Move static content to `static`
 
 Jekyll has a rule that any directory not starting with `_` will be copied as-is to the `_site` output. Hugo keeps all static content under `static`. You should therefore move it all there.
+
 With Jekyll, something that looked like
 
     ▾ <root>/
