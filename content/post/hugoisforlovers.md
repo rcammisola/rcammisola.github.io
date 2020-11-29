@@ -1,19 +1,19 @@
-+++
-title = "Getting Started with Hugo"
-description = ""
-tags = [
+---
+title:  "Getting Started with Hugo"
+description:  ""
+tags:  [
     "go",
     "golang",
     "hugo",
     "development",
 ]
-date = "2014-04-02"
-categories = [
+date:  "2014-04-02"
+categories:  [
     "Development",
     "golang",
 ]
-
-+++
+draft: true
+---
 
 
 These steps should get you started with Hugo blogging

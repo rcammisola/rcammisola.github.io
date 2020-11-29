@@ -1,9 +1,10 @@
-+++
-title = "Creating a New Theme"
-description = "Description of my awesome project."
-date = 2014-09-28T02:13:50Z
-author = "Michael Henderson"
-+++
+---
+title: "Creating a New Theme"
+description: "Description of my awesome project."
+date: 2014-09-28T02:13:50Z
+author: "Michael Henderson"
+draft: true
+---
 
 This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content.
 
