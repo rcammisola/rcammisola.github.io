@@ -1,9 +1,9 @@
 msg="Updated blog"
 
 blog:
-	hugo -t beautifulhugo
+	hugo -t beautifulhugo --minify
 
-server: blog
+server:
 	hugo -D server
 
 deploy: blog
