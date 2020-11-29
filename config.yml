@@ -39,6 +39,7 @@ params:
   homeTitle: Rocco Cammisola
   subtitle: I don't know what I'm doing, hopefully I'll work it out...
   logo: "img/profile.jpeg"
+  since: 2020
   rss: false
   dateFormat: "Mon, Jan 2, 2006"
   readingTime: true
