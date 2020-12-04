@@ -13,7 +13,7 @@ markup:
     guessSyntax: false
     lineNoStart: 1
     lineNos: true
-    lineNumbersInTable: false
+    lineNumbersInTable: true
     style: "dracula"
 
 privacy:
