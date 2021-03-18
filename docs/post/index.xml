@@ -1,1 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Home</title><link>https://rcammisola.github.io/post/</link><description>Recent content in Posts on Home</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>Rocco Cammisola</copyright><lastBuildDate>Sun, 29 Nov 2020 15:43:24 +0000</lastBuildDate><atom:link href="https://rcammisola.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploying a Hugo blog to GitHub</title><link>https://rcammisola.github.io/2020/11/29/deploying-hugo-github-pages/</link><pubDate>Sun, 29 Nov 2020 15:43:24 +0000</pubDate><guid>https://rcammisola.github.io/2020/11/29/deploying-hugo-github-pages/</guid><description>&lt;p>How to deploy a Hugo site to GitHub Pages using a single repository.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Home</title>
+    <link>https://rcammisola.github.io/post/</link>
+    <description>Recent content in Posts on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Rocco Cammisola</copyright>
+    <lastBuildDate>Sun, 29 Nov 2020 15:43:24 +0000</lastBuildDate><atom:link href="https://rcammisola.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploying a Hugo blog to GitHub</title>
+      <link>https://rcammisola.github.io/2020/11/29/deploying-hugo-github-pages/</link>
+      <pubDate>Sun, 29 Nov 2020 15:43:24 +0000</pubDate>
+      
+      <guid>https://rcammisola.github.io/2020/11/29/deploying-hugo-github-pages/</guid>
+      <description>&lt;p&gt;How to deploy a Hugo site to GitHub Pages using a single repository.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rcammisola.github.io/1/01/01/developing-tdd-skills-tennis-game-kata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rcammisola.github.io/1/01/01/developing-tdd-skills-tennis-game-kata/</guid>
+      <description>title: &amp;quot;Developing TDD skills using the Tennis Game Kata&amp;quot; description: &amp;quot;&amp;quot; date: 2021-02-20T15:54:12Z tags: [] categories: [] draft: true Overview Kata intro without spelling out the full description
+caveat that I did the refactoring kata first so implementation ideas &amp;ldquo;tainted&amp;rdquo; by that
+Areas of focus Testing Behaviours not implementation Using ZOMBIEs to choose what to test Test Cases  Score is &amp;ldquo;Love-all&amp;rdquo; at start of game Scores is &amp;ldquo;Fifteen-Love&amp;rdquo; when player 1 scores the first point Scores is &amp;ldquo;Love-Fifteen&amp;rdquo; when player 2 scores the first point Score is &amp;ldquo;Forty-Fifteen&amp;rdquo; when player 1 has scored 3 points and player 2 has scored 1 point Score is &amp;ldquo;Fifteen-all&amp;rdquo; or &amp;ldquo;Thirty-all&amp;rdquo; when scores are tied and players have scored fewer than 3 points Score is &amp;ldquo;Deuce&amp;rdquo; when both players have scored 3 points Score is &amp;ldquo;Advantage player 1&amp;rdquo; when player 1 wins the point after Deuce Score is &amp;ldquo;Deuce&amp;rdquo; when both players have scored 3+ points and the score is tied Score is &amp;ldquo;Player 2 Won&amp;rdquo; when player 2 has 4+ points and the lead is at least two points  First test: Love-all at start of game Red The start of the game marks our &amp;ldquo;zero&amp;rdquo; point.</description>
+    </item>
+    
+  </channel>
+</rss>

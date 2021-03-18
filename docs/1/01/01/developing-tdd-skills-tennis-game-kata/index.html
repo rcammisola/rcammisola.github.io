@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Home - Home</title>
+  <meta name="description" content="title: &quot;Developing TDD skills using the Tennis Game Kata&quot; description: &quot;&quot; date: 2021-02-20T15:54:12Z tags: [] categories: [] draft: true Overview Kata intro without spelling out the full description
+caveat that I did the refactoring kata first so implementation ideas &ldquo;tainted&rdquo; by that
+Areas of focus Testing Behaviours not implementation Using ZOMBIEs to choose what to test Test Cases  Score is &ldquo;Love-all&rdquo; at start of game Scores is &ldquo;Fifteen-Love&rdquo; when player 1 scores the first point Scores is &ldquo;Love-Fifteen&rdquo; when player 2 scores the first point Score is &ldquo;Forty-Fifteen&rdquo; when player 1 has scored 3 points and player 2 has scored 1 point Score is &ldquo;Fifteen-all&rdquo; or &ldquo;Thirty-all&rdquo; when scores are tied and players have scored fewer than 3 points Score is &ldquo;Deuce&rdquo; when both players have scored 3 points Score is &ldquo;Advantage player 1&rdquo; when player 1 wins the point after Deuce Score is &ldquo;Deuce&rdquo; when both players have scored 3&#43; points and the score is tied Score is &ldquo;Player 2 Won&rdquo; when player 2 has 4&#43; points and the lead is at least two points  First test: Love-all at start of game Red The start of the game marks our &ldquo;zero&rdquo; point.">
+  <meta name="author" content="Rocco Cammisola"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Home",
+    
+    "url": "https:\/\/rcammisola.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/rcammisola.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/rcammisola.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/rcammisola.github.io\/1\/01\/01\/developing-tdd-skills-tennis-game-kata\/",
+          "name": ""
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Rocco Cammisola"
+  },
+  "headline": "",
+  "description" : "title: \u0026quot;Developing TDD skills using the Tennis Game Kata\u0026quot; description: \u0026quot;\u0026quot; date: 2021-02-20T15:54:12Z tags: [] categories: [] draft: true Overview Kata intro without spelling out the full description\ncaveat that I did the refactoring kata first so implementation ideas \u0026ldquo;tainted\u0026rdquo; by that\nAreas of focus Testing Behaviours not implementation Using ZOMBIEs to choose what to test Test Cases  Score is \u0026ldquo;Love-all\u0026rdquo; at start of game Scores is \u0026ldquo;Fifteen-Love\u0026rdquo; when player 1 scores the first point Scores is \u0026ldquo;Love-Fifteen\u0026rdquo; when player 2 scores the first point Score is \u0026ldquo;Forty-Fifteen\u0026rdquo; when player 1 has scored 3 points and player 2 has scored 1 point Score is \u0026ldquo;Fifteen-all\u0026rdquo; or \u0026ldquo;Thirty-all\u0026rdquo; when scores are tied and players have scored fewer than 3 points Score is \u0026ldquo;Deuce\u0026rdquo; when both players have scored 3 points Score is \u0026ldquo;Advantage player 1\u0026rdquo; when player 1 wins the point after Deuce Score is \u0026ldquo;Deuce\u0026rdquo; when both players have scored 3\u002b points and the score is tied Score is \u0026ldquo;Player 2 Won\u0026rdquo; when player 2 has 4\u002b points and the lead is at least two points  First test: Love-all at start of game Red The start of the game marks our \u0026ldquo;zero\u0026rdquo; point.",
+  "inLanguage" : "en",
+  "wordCount":  1303 ,
+  "datePublished" : "0001-01-01T00:00:00",
+  "dateModified" : "0001-01-01T00:00:00",
+  "image" : "https:\/\/rcammisola.github.io\/img\/profile.jpeg",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/rcammisola.github.io\/1\/01\/01\/developing-tdd-skills-tennis-game-kata\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/rcammisola.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/rcammisola.github.io\/img\/profile.jpeg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Home" />
+<meta property="og:description" content="title: &quot;Developing TDD skills using the Tennis Game Kata&quot; description: &quot;&quot; date: 2021-02-20T15:54:12Z tags: [] categories: [] draft: true Overview Kata intro without spelling out the full description
+caveat that I did the refactoring kata first so implementation ideas &ldquo;tainted&rdquo; by that
+Areas of focus Testing Behaviours not implementation Using ZOMBIEs to choose what to test Test Cases  Score is &ldquo;Love-all&rdquo; at start of game Scores is &ldquo;Fifteen-Love&rdquo; when player 1 scores the first point Scores is &ldquo;Love-Fifteen&rdquo; when player 2 scores the first point Score is &ldquo;Forty-Fifteen&rdquo; when player 1 has scored 3 points and player 2 has scored 1 point Score is &ldquo;Fifteen-all&rdquo; or &ldquo;Thirty-all&rdquo; when scores are tied and players have scored fewer than 3 points Score is &ldquo;Deuce&rdquo; when both players have scored 3 points Score is &ldquo;Advantage player 1&rdquo; when player 1 wins the point after Deuce Score is &ldquo;Deuce&rdquo; when both players have scored 3&#43; points and the score is tied Score is &ldquo;Player 2 Won&rdquo; when player 2 has 4&#43; points and the lead is at least two points  First test: Love-all at start of game Red The start of the game marks our &ldquo;zero&rdquo; point.">
+<meta property="og:image" content="https://rcammisola.github.io/img/profile.jpeg" />
+<meta property="og:url" content="https://rcammisola.github.io/1/01/01/developing-tdd-skills-tennis-game-kata/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Home" />
+
+  <meta name="twitter:title" content="Home" />
+  <meta name="twitter:description" content="title: &quot;Developing TDD skills using the Tennis Game Kata&quot; description: &quot;&quot; date: 2021-02-20T15:54:12Z tags: [] categories: [] draft: true Overview Kata intro without spelling out …">
+  <meta name="twitter:image" content="https://rcammisola.github.io/img/profile.jpeg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@rcammisola" />
+  <meta name="twitter:creator" content="@rcammisola" />
+  <meta name="generator" content="Hugo 0.78.2" />
+  <link rel="alternate" href="https://rcammisola.github.io/index.xml" type="application/rss+xml" title="Home"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://rcammisola.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://rcammisola.github.io/css/syntax.css" /><link rel="stylesheet" href="https://rcammisola.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://rcammisola.github.io/">Home</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Posts" href="/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Home" href="https://rcammisola.github.io/">
+            <img class="avatar-img" src="https://rcammisola.github.io/img/profile.jpeg" alt="Home" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  <div class="intro-header"></div>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <pre><code>title: &quot;Developing TDD skills using the Tennis Game Kata&quot;
+description: &quot;&quot;
+date: 2021-02-20T15:54:12Z
+tags: []
+categories: []
+draft: true
+</code></pre><h2 id="overview">Overview</h2>
+<p>Kata intro without spelling out the full description</p>
+<p>caveat that I did the refactoring kata first so implementation ideas &ldquo;tainted&rdquo; by that</p>
+<h2 id="areas-of-focus">Areas of focus</h2>
+<h3 id="testing-behaviours-not-implementation">Testing Behaviours not implementation</h3>
+<h3 id="using-zombies-to-choose-what-to-test">Using ZOMBIEs to choose what to test</h3>
+<h2 id="test-cases">Test Cases</h2>
+<ul>
+<li>Score is &ldquo;Love-all&rdquo; at start of game</li>
+<li>Scores is &ldquo;Fifteen-Love&rdquo; when player 1 scores the first point</li>
+<li>Scores is &ldquo;Love-Fifteen&rdquo; when player 2 scores the first point</li>
+<li>Score is &ldquo;Forty-Fifteen&rdquo; when player 1 has scored 3 points and player 2 has scored 1 point</li>
+<li>Score is &ldquo;Fifteen-all&rdquo; or &ldquo;Thirty-all&rdquo; when scores are tied and players have scored fewer than 3 points</li>
+<li>Score is &ldquo;Deuce&rdquo; when both players have scored 3 points</li>
+<li>Score is &ldquo;Advantage player 1&rdquo; when player 1 wins the point after Deuce</li>
+<li>Score is &ldquo;Deuce&rdquo; when both players have scored 3+ points and the score is tied</li>
+<li>Score is &ldquo;Player 2 Won&rdquo; when player 2 has 4+ points and the lead is at least two points</li>
+</ul>
+<h2 id="first-test-love-all-at-start-of-game">First test: Love-all at start of game</h2>
+<h4 id="red">Red</h4>
+<p>The start of the game marks our &ldquo;zero&rdquo; point. No points have been scored by either player so the score should be Love-all. Our first test quite simply initialises a TennisGame object with two players and immediately checks the score.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> tennis_game <span style="color:#ff79c6">import</span> TennisGame
+
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">test_score_is_love_all_at_start_of_game</span>():
+    game <span style="color:#ff79c6">=</span> TennisGame(<span style="color:#f1fa8c">&#34;Federer&#34;</span>, <span style="color:#f1fa8c">&#34;Nadal&#34;</span>)
+
+    <span style="color:#ff79c6">assert</span> game<span style="color:#ff79c6">.</span>score() <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;Love-all&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>I had cheated a little bit and had the following skeleton to start with based on the refactoring kata, but it&rsquo;s simple enough for me to not be too concerned with the shortcut. It also omits any decision on how scoring should actually work which should allow enough space to experiment.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">TennisGame</span>:
+    <span style="color:#ff79c6">def</span> __init__(self, player1_name, player2_name):
+        self<span style="color:#ff79c6">.</span>player1_name <span style="color:#ff79c6">=</span> player1_name
+        self<span style="color:#ff79c6">.</span>player2_name <span style="color:#ff79c6">=</span> player2_name
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">score</span>(self):
+        <span style="color:#ff79c6">pass</span>
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">won_point</span>(self, player_name):
+        <span style="color:#ff79c6">pass</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Netherless, the test fails:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ff79c6">=============================================</span> <span style="color:#8be9fd;font-style:italic">test</span> session <span style="color:#8be9fd;font-style:italic">starts</span> <span style="color:#ff79c6">==============================================</span>
+platform darwin -- Python 3.8.5, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+collected <span style="color:#bd93f9">1</span> item                                                                                               
+
+tests/test_tennis_game.py F                                                                              <span style="color:#ff79c6">[</span>100%<span style="color:#ff79c6">]</span>
+
+<span style="color:#ff79c6">===================================================</span> <span style="color:#8be9fd;font-style:italic">FAILURES</span> <span style="color:#ff79c6">===================================================</span>
+___________________________________ test_score_is_love_all_at_start_of_game ____________________________________
+
+    def test_score_is_love_all_at_start_of_game<span style="color:#ff79c6">()</span>:
+        <span style="color:#8be9fd;font-style:italic">game</span> <span style="color:#ff79c6">=</span> TennisGame<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Federer&#34;</span>, <span style="color:#f1fa8c">&#34;Nadal&#34;</span><span style="color:#ff79c6">)</span>
+    
+&gt;       assert game.score<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;Love-all&#34;</span>
+E       AssertionError: assert <span style="color:#8be9fd;font-style:italic">None</span> <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;Love-all&#39;</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><p>It&rsquo;s really important to see your test fail to ensure that it has tried to check for a specific piece of functionality at some point in time.</p>
+<h4 id="green">Green</h4>
+<p>Getting our first test to pass when using TDD couldn&rsquo;t be easier. We&rsquo;re trying to write as little code as possible to ensure that all code paths are verified by tests as well as avoiding over-design. In this case we can simply return the hard-coded score of &ldquo;Love-all&rdquo;, all other scores are impossible in our simplistic games-have-only-ever-just-started world.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">...</span>
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">score</span>(self):
+        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;Love-all&#34;</span>
+<span style="color:#ff79c6">...</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ff79c6">=============================================</span> <span style="color:#8be9fd;font-style:italic">test</span> session <span style="color:#8be9fd;font-style:italic">starts</span> <span style="color:#ff79c6">==============================================</span>
+platform darwin -- Python 3.8.5, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+collected <span style="color:#bd93f9">1</span> item                                                                                               
+
+tests/test_tennis_game.py .                                                                              <span style="color:#ff79c6">[</span>100%<span style="color:#ff79c6">]</span>
+
+<span style="color:#ff79c6">==============================================</span> <span style="color:#bd93f9">1</span> passed in 0.01s <span style="color:#ff79c6">===============================================</span>
+Name                 Stmts   Miss  Cover   Missing
+--------------------------------------------------
+src/tennis_game.py       <span style="color:#bd93f9">8</span>      <span style="color:#bd93f9">1</span>    88%   <span style="color:#bd93f9">12</span>
+--------------------------------------------------
+TOTAL                    <span style="color:#bd93f9">8</span>      <span style="color:#bd93f9">1</span>    88%
+
+</code></pre></td></tr></table>
+</div>
+</div><p>Our test passes and there&rsquo;s no particularly obvious refactoring at this stage, so we move on to the next requirement.</p>
+<h2 id="scores-is-fifteen-love-when-player-1-scores-the-first-point">Scores is &ldquo;Fifteen-Love&rdquo; when player 1 scores the first point</h2>
+<p>The three scenarios that follow are very similar. Once players have won some points we&rsquo;d expect to see the score reflect that. These scenarios start to help us cross off the One and Many items to test when following the ZOMBIEs guide.</p>
+<h4 id="red-1">Red</h4>
+<p>In order to make this happen we now have to start to care about how points can be accrued.</p>
+<p>We have a <code>won_point</code> method that takes the name of the player who won the point, but it&rsquo;s up to us to decide how to keep track of the points for each player internally. At this point in might be tempting to start to add tests that reach into your implemenation details in order to check that <code>won_point</code> does the basic job you&rsquo;ve asked it to do. Perhaps you&rsquo;d do that by writing a test that does something like the following:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">test_won_point_increments_score_for_player_one</span>():
+    player1_name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Federer&#34;</span>
+    player2_name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Nadal&#34;</span>
+    game <span style="color:#ff79c6">=</span> TennisGame(player1_name, player2_name)
+
+    game<span style="color:#ff79c6">.</span>won_point(player1_name)
+
+    <span style="color:#ff79c6">assert</span> game<span style="color:#ff79c6">.</span>player1_points <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">1</span>
+    <span style="color:#ff79c6">assert</span> game<span style="color:#ff79c6">.</span>player2_points <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>However, the core idea behind testing behaviours encourages us NOT to do this and instead see the <code>score</code> method as the window through which we will observe changes to the internal state that player points represents.</p>
+<p>More concretely in this scenario, instead of testing that the player&rsquo;s points have been incremented let us test that a player winning a point is reflected by the appropriate change to the score of the game.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">test_score_fifteen_love_when_player_1_scores_first_point</span>():
+    player1_name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Federer&#34;</span>
+    player2_name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Nadal&#34;</span>
+    game <span style="color:#ff79c6">=</span> TennisGame(player1_name, player2_name)
+
+    game<span style="color:#ff79c6">.</span>won_point(player1_name)
+
+    <span style="color:#ff79c6">assert</span> game<span style="color:#ff79c6">.</span>score() <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;Fifteen-Love&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>WIth this approach we are treating our code as a bit more of a black box. We don&rsquo;t know and/or care about how the points are implemented, we <strong>do</strong> care about what the score is. This frees us to change how we keep track of points inside <code>TennisGame</code> without affecting the observable behaviour.</p>
+<h4 id="green--refactor">Green + Refactor</h4>
+<p>Back to getting our tests to pass. Solving this for the possible scores that each player can have isn&rsquo;t too taxing once we decide that we&rsquo;ll use integers for points and map those over to the text representation as part of the score method.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">...</span>
+
+<span style="color:#ff79c6">def</span> __init__(self, player1_name, player2_name):
+    self<span style="color:#ff79c6">.</span>player1_name <span style="color:#ff79c6">=</span> player1_name
+    self<span style="color:#ff79c6">.</span>player2_name <span style="color:#ff79c6">=</span> player2_name
+    self<span style="color:#ff79c6">.</span>player1_points <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+    self<span style="color:#ff79c6">.</span>player2_points <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+
+    self<span style="color:#ff79c6">.</span>point_map <span style="color:#ff79c6">=</span> {
+        <span style="color:#bd93f9">0</span>: <span style="color:#f1fa8c">&#34;Love&#34;</span>,
+        <span style="color:#bd93f9">1</span>: <span style="color:#f1fa8c">&#34;Fifteen&#34;</span>,
+        <span style="color:#bd93f9">2</span>: <span style="color:#f1fa8c">&#34;Thirty&#34;</span>,
+        <span style="color:#bd93f9">3</span>: <span style="color:#f1fa8c">&#34;Forty&#34;</span>,
+    }
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">score</span>(self):
+    <span style="color:#ff79c6">if</span> self<span style="color:#ff79c6">.</span>player1_points <span style="color:#ff79c6">==</span> self<span style="color:#ff79c6">.</span>player2_points:
+        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;Love-all&#34;</span>
+    <span style="color:#ff79c6">else</span>:
+        player1_score <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>point_map[self<span style="color:#ff79c6">.</span>player1_points]
+        player2_score <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>point_map[self<span style="color:#ff79c6">.</span>player2_points]
+
+        <span style="color:#ff79c6">return</span> f<span style="color:#f1fa8c">&#34;{player1_score}-{player2_score}&#34;</span>
+<span style="color:#ff79c6">...</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>I failed to commit often enough at this point to capture the deltas between getting the tests to pass and refactoring. The point map may not have been extracted out as an attribute initially. It&rsquo;s also worth noting that we still only support a single case for a tied game (start of game).</p>
+<p>With this implementation in place tests for 0-15 and 40-15 passed as soon as they were written. It was useful to mutate the point map and break the code in order to force them to fail, though. Just to make sure!</p>
+<h3 id="test-refactoring">Test refactoring</h3>
+<p>The biggest refactoring following these tests was to refactor the test code to remove duplication. Using <code>pytest</code> parameterisation helped reduce the footprint of the test cases:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">@pytest.mark.parametrize(
+    <span style="color:#f1fa8c">&#34;player1_score, player2_score, expected_score&#34;</span>,
+    [
+        (<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">0</span>, <span style="color:#f1fa8c">&#34;Fifteen-Love&#34;</span>),
+        (<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">1</span>, <span style="color:#f1fa8c">&#34;Love-Fifteen&#34;</span>),
+        (<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">1</span>, <span style="color:#f1fa8c">&#34;Forty-Fifteen&#34;</span>),
+    ]
+)
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">test_standard_in_game_scoring_scenarios</span>(player1_score, player2_score, expected_score):
+    player1_name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Federer&#34;</span>
+    player2_name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Nadal&#34;</span>
+    game <span style="color:#ff79c6">=</span> TennisGame(player1_name, player2_name)
+
+    <span style="color:#ff79c6">for</span> point <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#8be9fd;font-style:italic">max</span>(player1_score, player2_score)):
+        <span style="color:#ff79c6">if</span> point <span style="color:#ff79c6">&lt;</span> player1_score:
+            game<span style="color:#ff79c6">.</span>won_point(player1_name)
+        <span style="color:#ff79c6">if</span> point <span style="color:#ff79c6">&lt;</span> player2_score:
+            game<span style="color:#ff79c6">.</span>won_point(player2_name)
+
+    <span style="color:#ff79c6">assert</span> game<span style="color:#ff79c6">.</span>score() <span style="color:#ff79c6">==</span> expected_score
+</code></pre></td></tr></table>
+</div>
+</div><p>But I&rsquo;m not sure if the initial readability has been well maintained by doing this. The for loop needs to be read to see what it&rsquo;s doing.</p>
+<h2 id="score-is-fifteen-all-or-thirty-all-when-scores-are-tied-and-players-have-scored-fewer-than-3-points">Score is &ldquo;Fifteen-all&rdquo; or &ldquo;Thirty-all&rdquo; when scores are tied and players have scored fewer than 3 points</h2>
+<h2 id="score-is-deuce-when-both-players-have-scored-3-points">Score is &ldquo;Deuce&rdquo; when both players have scored 3 points</h2>
+<h2 id="score-is-advantage-player-1-when-player-1-wins-the-point-after-deuce">Score is &ldquo;Advantage player 1&rdquo; when player 1 wins the point after Deuce</h2>
+<h2 id="score-is-deuce-when-both-players-have-scored-3-points-and-the-score-is-tied">Score is &ldquo;Deuce&rdquo; when both players have scored 3+ points and the score is tied</h2>
+<h2 id="score-is-player-2-won-when-player-2-has-4-points-and-the-lead-is-at-least-two-points">Score is &ldquo;Player 2 Won&rdquo; when player 2 has 4+ points and the lead is at least two points</h2>
+<h2 id="reflection">Reflection</h2>
+<p>Code on github</p>
+
+
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+            <li class="next">
+              <a href="https://rcammisola.github.io/2020/11/29/deploying-hugo-github-pages/" data-toggle="tooltip" data-placement="top" title="Deploying a Hugo blog to GitHub">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/rcammisola" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/rcammisola" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Rocco Cammisola
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020 - 2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://rcammisola.github.io/">Home</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.78.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://rcammisola.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://rcammisola.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
