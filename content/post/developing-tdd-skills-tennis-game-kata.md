@@ -222,21 +222,285 @@ But I'm not sure if the initial readability has been well maintained by doing th
 
 ## Score is "Fifteen-all" or "Thirty-all" when scores are tied and players have scored fewer than 3 points
 
+Failing test
 
+```python
+@pytest.mark.parametrize(
+    "player1_score, player2_score, expected_score",
+    [
+        (0, 0, "Love-all"),
+        (1, 1, "Fifteen-all"),
+        (2, 2, "Thirty-all"),
+    ]
+)
+def test_tied_game_scenarios(player1_score, player2_score, expected_score):
+    player1_name = "Federer"
+    player2_name = "Nadal"
+    game = TennisGame(player1_name, player2_name)
+
+    for point in range(max(player1_score, player2_score)):
+        if point < player1_score:
+            game.won_point(player1_name)
+        if point < player2_score:
+            game.won_point(player2_name)
+
+    assert game.score() == expected_score
+```
+
+Main change to score method
+
+```python
+def score(self):
+    if self.player1_points == self.player2_points:
+        tied_score = self.point_map[self.player1_points]
+        return f"{tied_score}-all"
+    else:
+        ...
+```
 
 ## Score is "Deuce" when both players have scored 3 points
 
+Test:
 
+```python
+@pytest.mark.parametrize(
+    "player1_score, player2_score, expected_score",
+    [
+        (0, 0, "Love-all"),
+        (1, 1, "Fifteen-all"),
+        (2, 2, "Thirty-all"),
+        (3, 3, "Deuce"),
+    ]
+)
+def test_tied_game_scenarios(player1_score, player2_score, expected_score):
+		...
+```
+
+Implementation
+
+```python
+    def score(self):
+        if self.player1_points == self.player2_points:
+            if self.player1_points == 3:
+                game_score = "Deuce"
+            else:
+                tied_score = self.point_map[self.player1_points]
+                game_score = f"{tied_score}-all"
+        else:
+            player1_score = self.point_map[self.player1_points]
+            player2_score = self.point_map[self.player2_points]
+
+            game_score = f"{player1_score}-{player2_score}"
+
+        return game_score
+```
+
+Concerns with the change made
 
 ## Score is "Advantage player 1" when player 1 wins the point after Deuce
+
+Failing test:
+
+```python
+@pytest.mark.parametrize(
+    "player1_score, player2_score, expected_score",
+    [
+        (4, 3, "Advantage Federer"),
+    ]
+)
+def test_score_is_advantage_when_player_wins_point_at_deuce(player1_score, player2_score, expected_score):
+    player1_name = "Federer"
+    player2_name = "Nadal"
+    game = TennisGame(player1_name, player2_name)
+
+    for point in range(max(player1_score, player2_score)):
+        if point < player1_score:
+            game.won_point(player1_name)
+        if point < player2_score:
+            game.won_point(player2_name)
+
+    assert game.score() == expected_score
+```
+
+Implementation:
+
+```
+def score(self):
+    if self.player1_points == self.player2_points:
+        if self.player1_points == 3:
+            game_score = "Deuce"
+        else:
+            tied_score = self.point_map[self.player1_points]
+            game_score = f"{tied_score}-all"
+    elif self.player1_points > 2 and self.player2_points > 2:
+        leading_player = self.player1_name if self.player1_points > self.player2_points else self.player2_name
+        game_score = f"Advantage {leading_player}"
+    ...
+```
+
+Haven't dealt with the player winning a game scenario just yet
+
+Some refactorings that look helpful at this point:
+
+extract method for determining currently leading player
+
+```python
+	def score(self):
+		...
+	  elif self.player1_points > 2 and self.player2_points > 2:
+    	game_score = f"Advantage {self._currently_leading_player()}"
+    ...
+
+  def _currently_leading_player(self):
+    return self.player1_name if self.player1_points > self.player2_points else self.player2_name
+```
+
+Extract method for tied game score to reduce the noise in `score`
+
+```python
+def score(self):
+    if self.player1_points == self.player2_points:
+        game_score = self._tied_game_score()
+
+    elif self.player1_points > 2 and self.player2_points > 2:
+        game_score = f"Advantage {self._currently_leading_player()}"
+    else:
+        player1_score = self.point_map[self.player1_points]
+        player2_score = self.point_map[self.player2_points]
+
+        game_score = f"{player1_score}-{player2_score}"
+
+    return game_score
+
+def _tied_game_score(self):
+    if self.player1_points == 3:
+        game_score = "Deuce"
+    else:
+        tied_score = self.point_map[self.player1_points]
+        game_score = f"{tied_score}-all"
+    return game_score
+```
 
 
 
 ## Score is "Deuce" when both players have scored 3+ points and the score is tied
 
+Because of how we've implemented our point system and parameterised the test we get this test almost for free by adding a scenario to the parameterised list of tied games.
 
+```python
+@pytest.mark.parametrize(
+    "player1_score, player2_score, expected_score",
+    [
+        (0, 0, "Love-all"),
+        (1, 1, "Fifteen-all"),
+        (2, 2, "Thirty-all"),
+        (3, 3, "Deuce"),
+        (8, 8, "Deuce"),
+    ]
+)
+```
+
+Implementation is also trivial within the _tied_game_score method
+
+```python
+def _tied_game_score(self):
+    if self.player1_points >= 3:
+        game_score = "Deuce"
+    ...
+```
+
+Refactoring at this stage is to try and pull out magic numbers into constants so that meaning of values is clearer in conditions and assignments 
+
+```
+POINTS_LOVE = 0
+POINTS_FIFTEEN = 1
+POINTS_THIRTY = 2
+POINTS_FORTY = 3
+```
 
 ## Score is "Player 2 Won" when player 2 has 4+ points and the lead is at least two points
+
+Failing test:
+
+```python
+@pytest.mark.parametrize(
+    "player1_score, player2_score, expected_score",
+    [
+        (4, 2, "Federer Won"),
+    ]
+)
+def test_score_is_player_won_when_over_forty_points_and_leads_by_at_least_two_scores(player1_score,
+                                                                                     player2_score,
+                                                                                     expected_score):
+    player1_name = "Federer"
+    player2_name = "Nadal"
+    game = TennisGame(player1_name, player2_name)
+
+    for point in range(max(player1_score, player2_score)):
+        if point < player1_score:
+            game.won_point(player1_name)
+        if point < player2_score:
+            game.won_point(player2_name)
+
+    assert game.score() == expected_score
+```
+
+
+
+Implementation as the first check within score()
+
+```python
+def score(self):
+    if (self.player1_points > POINTS_FORTY or self.player2_points > POINTS_FORTY) and abs(self.player1_points-self.player2_points) >= 2:
+        game_score = f"{self._currently_leading_player()} Won"
+
+    elif self.player1_points == self.player2_points:
+        game_score = self._tied_game_score()
+  	...
+```
+
+
+
+Refactoring
+
+Extract helper for checking the lead for the winning player
+
+```
+def _lead_is_at_least(self, lead):
+    return abs(self.player1_points-self.player2_points) >= lead
+```
+
+Extract duplicated logic in test to play the game for the specified number of points
+
+```
+def play_out_game(player1_score, player2_score):
+    player1_name = "Federer"
+    player2_name = "Nadal"
+    game = TennisGame(player1_name, player2_name)
+
+    for point in range(max(player1_score, player2_score)):
+        if point < player1_score:
+            game.won_point(player1_name)
+        if point < player2_score:
+            game.won_point(player2_name)
+
+    return game
+```
+
+Making the tests look like this
+
+```
+def test_tied_game_scenarios(player1_score, player2_score, expected_score):
+    game = play_out_game(player1_score, player2_score)
+
+    assert game.score() == expected_score
+```
+
+
+
+## Remove unnecessary tests
+
+Start of game test no longer needed because Love-all is handled by the tied game tests, so we can get rid of it to reduce our tests without losing any coverage.
 
 
 
