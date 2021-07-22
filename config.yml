@@ -6,6 +6,7 @@ theme: beautifulhugo
 languageCode: en
 defaultContentLanguage: en
 copyright: Rocco Cammisola
+disqusShortname: "rcammisola-github-io"
 
 markup:
   highlight:
@@ -18,7 +19,7 @@ markup:
 
 privacy:
   disqus:
-    disable: true
+    disable: false
   googleAnalytics:
     anonymizeIP: true
     respectDoNotTrack: true
@@ -42,6 +43,7 @@ params:
   since: 2020
   rss: false
   dateFormat: "Mon, Jan 2, 2006"
+  comments: true
   readingTime: true
   readingTimeText: "Estimated reading time:"
   fathomUrl: ""
