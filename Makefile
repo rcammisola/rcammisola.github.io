@@ -1,4 +1,4 @@
-msg="Updated blog"
+msg=Updated blog
 
 blog:
 	hugo -t beautifulhugo --minify
